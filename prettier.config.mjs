@@ -4,7 +4,7 @@ const config = {
   bracketSameLine: false,
   bracketSpacing: true,
   jsxSingleQuote: false,
-  plugins: [],
+  plugins: ['@trivago/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss'],
   printWidth: 88,
   quoteProps: 'as-needed',
   requirePragma: false,
@@ -13,6 +13,16 @@ const config = {
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
+  importOrder: [
+    '^(react/(.*)$)|^(react$)',
+    '^(next/(.*)$)|^(next$)',
+    '<THIRD_PARTY_MODULES>',
+    '^~/(.*)$',
+    '^[../]',
+    '^[./]',
+  ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
 };
 
 export default config;
