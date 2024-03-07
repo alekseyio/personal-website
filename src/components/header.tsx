@@ -8,7 +8,7 @@ import { ThemeToggle } from './theme-toggle';
 
 export function Header() {
   return (
-    <header className="flex items-center gap-2">
+    <header className="-mx-1.5 flex items-center gap-2">
       <IconLink href="/" icon={LinkedIn} title="LinkedIn" />
       <IconLink href="/" icon={GitHub} title="GitHub" />
       <IconLink href="/" icon={Telegram} title="Telegram" />

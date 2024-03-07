@@ -14,29 +14,21 @@
   }
 
   h1 {
-    @apply mb-4 mt-14 text-3xl font-bold leading-10;
+    @apply mb-4 mt-14 text-3xl font-bold leading-10 max-sm:mt-12 max-sm:text-2xl;
   }
 
   h2 {
-    @apply mb-4 mt-12 text-2xl font-bold leading-8;
-  }
-
-  hr {
-    @apply my-4 border-t-2 border-t-gray-100;
+    @apply mb-4 mt-12 text-2xl font-bold leading-8 max-sm:mt-10 max-sm:text-xl;
   }
 
   p + p {
-    @apply mt-4;
-  }
-
-  li + li {
-    @apply mt-4;
+    @apply mt-4 max-sm:mt-3;
   }
 }
 
 @layer components {
   .action {
-    @apply inline-flex items-center gap-2 rounded-xl px-5 py-3.5 font-semibold leading-none h-11;
+    @apply inline-flex h-11 items-center gap-2 rounded-xl px-5 py-3.5 font-semibold leading-none;
   }
 
   .action--primary {
