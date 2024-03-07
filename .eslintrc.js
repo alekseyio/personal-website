@@ -22,6 +22,16 @@ const config = {
         ignoreRestSiblings: true,
       },
     ],
+    'react/jsx-sort-props': [
+      'error',
+      {
+        callbacksLast: true,
+        shorthandFirst: true,
+        ignoreCase: true,
+        noSortAlphabetically: false,
+        reservedFirst: true,
+      },
+    ],
     'prettier/prettier': 'warn',
   },
   ignorePatterns: ['.eslintrc.js', '*.config.js', '*.config.mjs', 'tailwind.config.ts'],

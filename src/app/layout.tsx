@@ -3,6 +3,8 @@ import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 
+import { Header } from '~/components/header';
+
 import './globals.css';
 
 const notoSans = Noto_Sans({
@@ -20,8 +22,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" className={notoSans.variable}>
-      <body>{children}</body>
+    <html className={notoSans.variable} lang="en">
+      <body>
+        <div className="mx-auto w-full max-w-2xl px-6 py-16">
+          <Header />
+          <main>{children}</main>
+        </div>
+      </body>
     </html>
   );
 }
