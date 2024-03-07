@@ -27,7 +27,7 @@ export function Intro() {
         </Link>
         <Link className="action action--secondary" href="/">
           Resume
-          <ExternalLink className="h-4 w-4" />
+          <ExternalLink className="h-[1.125rem] w-[1.125rem]" />
         </Link>
       </div>
     </section>

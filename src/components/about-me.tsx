@@ -15,9 +15,9 @@ export function AboutMe() {
         my favorites.
       </p>
       <p>
-        Right now I work as a Frontend Developer at{' '}
+        Right now I work as a Frontend Developer at&nbsp;
         <a
-          className="inline-flex items-center font-medium text-black"
+          className="inline-flex items-center font-medium text-black hover:underline"
           href="https://upcloud.com"
           rel="noopener noreferrer"
           target="_blank"

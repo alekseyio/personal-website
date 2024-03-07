@@ -3,6 +3,7 @@ import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 
+import { Footer } from '~/components/footer';
 import { Header } from '~/components/header';
 
 import './globals.css';
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <div className="mx-auto w-full max-w-2xl px-6 py-16">
           <Header />
           <main>{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

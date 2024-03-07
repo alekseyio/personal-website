@@ -36,7 +36,7 @@
 
 @layer components {
   .action {
-    @apply inline-flex items-center gap-2 rounded-xl px-5 py-3.5 font-medium leading-none;
+    @apply inline-flex items-center gap-2 rounded-xl px-5 py-3.5 font-semibold leading-none h-11;
   }
 
   .action--primary {
