@@ -21,7 +21,7 @@ export function Intro() {
         I frequently assist other engineers seeking expertise in areas where I&apos;ve
         contributed. This makes mentoring a regular part of my daily work.
       </p>
-      <div className="mt-6 space-x-4">
+      <div className="mt-5 space-x-4">
         <Link className="action action--primary" href="/contact">
           Get in touch
         </Link>
