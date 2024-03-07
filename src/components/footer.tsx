@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="mt-14 text-sm max-sm:mt-8">
       Crafted by me in 2024.
       <br />
-      Source code can be found on&nbsp;
+      Sources can be found on&nbsp;
       <a
         className="inline-flex items-center font-medium text-black hover:underline"
         href="/"

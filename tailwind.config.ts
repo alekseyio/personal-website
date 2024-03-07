@@ -1,3 +1,4 @@
+import twForms from '@tailwindcss/forms';
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
@@ -10,7 +11,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [twForms({ strategy: 'base' })],
 };
 
 export default config;
