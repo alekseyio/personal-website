@@ -1,7 +1,4 @@
-import Link from 'next/link';
-
-import { createContactRequest } from '~/actions/contact';
-import { Input } from '~/common/components';
+import { ContactForm } from './contact-form';
 
 export function GetInTouch() {
   return (
@@ -14,22 +11,5 @@ export function GetInTouch() {
       </p>
       <ContactForm />
     </section>
-  );
-}
-
-function ContactForm() {
-  return (
-    <form action={createContactRequest} className="mt-6 space-y-5">
-      <Input required id="subject" label="Subject" name="subject" type="text" />
-      <Input required id="message" label="Message" name="message" type="textarea" />
-      <div className="flex justify-end gap-4">
-        <Link className="action action--secondary" href="..">
-          Cancel
-        </Link>
-        <button className="action action--primary" type="submit">
-          Send
-        </button>
-      </div>
-    </form>
   );
 }

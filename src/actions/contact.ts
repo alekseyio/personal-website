@@ -1,8 +1,24 @@
 'use server';
 
-export async function createContactRequest(formData: FormData): Promise<void> {
-  const subject = formData.get('subject');
-  const message = formData.get('message');
+import { redirect } from 'next/navigation';
 
-  console.log({ subject, message });
+import { sendMessage } from '~/common/external/telegram';
+
+interface ContactRequestPayload {
+  subject: string;
+  message: string;
+}
+
+export async function createContactRequest(payload: ContactRequestPayload) {
+  let hasError = false;
+
+  try {
+    await sendMessage(payload.subject, payload.message);
+  } catch (err) {
+    hasError = true;
+
+    console.log('Send Telegram message failed', err);
+  }
+
+  redirect(hasError ? '/contact/error' : '/contact/success');
 }

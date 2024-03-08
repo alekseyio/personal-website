@@ -5,17 +5,21 @@ import clsx from 'clsx';
 type HTMLInputProps = ComponentPropsWithoutRef<'input'>;
 
 export function Input({
+  disabled,
   label,
   id,
   name,
   required,
   type = 'text',
+  onChange,
 }: {
+  disabled?: boolean;
   label: string;
   id: string;
   name: HTMLInputProps['name'];
   required?: boolean;
   type: HTMLInputProps['type'] | 'textarea';
+  onChange?: (value: string) => void;
 }) {
   const isTextarea = type === 'textarea';
   const Component = isTextarea ? 'textarea' : 'input';
@@ -30,13 +34,15 @@ export function Input({
       </label>
       <Component
         className={clsx(
-          'block w-full rounded-2xl border-2 border-transparent bg-gray-200 px-5 pb-[0.875rem] pt-[2.375rem] font-medium text-black hover:border-gray-300 focus:border-black focus:shadow-none focus:ring-0',
+          'block w-full rounded-2xl border-2 border-transparent bg-gray-200 px-5 pb-[0.875rem] pt-[2.375rem] font-medium text-black enabled:hover:border-gray-300 enabled:focus:border-black enabled:focus:shadow-none enabled:focus:ring-0 disabled:cursor-not-allowed',
           isTextarea && 'h-44 resize-none',
         )}
+        disabled={disabled}
         id={id}
         name={name}
         required={required}
         type={isTextarea ? undefined : type}
+        onChange={e => onChange?.(e.currentTarget.value)}
       />
     </div>
   );

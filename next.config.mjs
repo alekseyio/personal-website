@@ -6,6 +6,9 @@ const nextConfig = {
      */
     ignoreDuringBuilds: true,
   },
+  images: {
+    remotePatterns: [{ hostname: 'cataas.com', protocol: 'https' }],
+  },
 };
 
 export default nextConfig;
