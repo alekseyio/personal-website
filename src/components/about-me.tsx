@@ -17,7 +17,7 @@ export function AboutMe() {
       <p>
         Right now I work as a Frontend Developer at&nbsp;
         <a
-          className="inline-flex items-center font-medium text-black hover:underline"
+          className="inline-flex items-center font-medium text-black hover:underline dark:text-zinc-50"
           href="https://upcloud.com"
           rel="noopener noreferrer"
           target="_blank"

@@ -4,13 +4,13 @@
 
 @layer base {
   html {
-    @apply text-gray-600;
+    @apply text-gray-600 dark:text-zinc-400;
   }
 
   h1,
   h2,
   h3 {
-    @apply text-gray-900;
+    @apply text-gray-900 dark:text-zinc-100;
   }
 
   h1 {
@@ -32,10 +32,10 @@
   }
 
   .action--primary {
-    @apply bg-black text-gray-100 hover:bg-black/85 disabled:cursor-not-allowed disabled:!bg-black/80;
+    @apply bg-black text-gray-100 hover:bg-black/85 disabled:cursor-not-allowed disabled:!bg-black/80 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200 dark:disabled:!bg-zinc-400;
   }
 
   .action--secondary {
-    @apply bg-gray-200 hover:bg-gray-300/75;
+    @apply bg-gray-200 hover:bg-gray-300/75 dark:bg-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-600;
   }
 }

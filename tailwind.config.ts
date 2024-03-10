@@ -4,6 +4,7 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: ['./src/**/*.tsx'],
+  darkMode: 'media',
   theme: {
     extend: {
       fontFamily: {

@@ -41,13 +41,13 @@ function IconLink({
 }) {
   return (
     <a
-      className="rounded-lg p-1.5 hover:bg-gray-100"
+      className="rounded-lg p-1.5 hover:bg-gray-100 dark:hover:bg-zinc-800"
       href={href}
       rel="noopener noreferrer"
       target="_blank"
       title={title}
     >
-      <Icon className="h-7 w-7 text-black" />
+      <Icon className="h-7 w-7 text-black dark:text-zinc-100" />
     </a>
   );
 }
@@ -55,7 +55,7 @@ function IconLink({
 function BackButton() {
   return (
     <Link
-      className="mr-auto inline-flex items-center gap-1.5 px-1.5 font-medium text-black hover:text-gray-600"
+      className="mr-auto inline-flex items-center gap-1.5 px-1.5 font-medium text-black hover:text-gray-600 dark:text-zinc-50 dark:hover:text-zinc-300"
       href="/"
     >
       <ArrowLeft />
