@@ -22,12 +22,12 @@ export function Intro() {
         contributed. This makes mentoring a regular part of my daily work.
       </p>
       <div className="mt-5 space-x-4">
-        <Link className="action action--primary" href="/contact">
-          Get in touch
-        </Link>
-        <Link className="action action--secondary" href="/">
+        <a className="action action--primary" href="/resume.pdf" target="_blank">
           Resume
           <ExternalLink className="h-[1.125rem] w-[1.125rem]" />
+        </a>
+        <Link className="action action--secondary" href="/contact">
+          Get in touch
         </Link>
       </div>
     </section>

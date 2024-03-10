@@ -39,7 +39,7 @@ export function ContactForm() {
             onChange={setMessage}
           />
           <div className="flex justify-end gap-4">
-            <Link className="action action--secondary" href="..">
+            <Link className="action action--secondary" href="/">
               Cancel
             </Link>
             <button

@@ -8,7 +8,7 @@ export function Footer() {
       Sources can be found on&nbsp;
       <a
         className="inline-flex items-center font-medium text-black hover:underline"
-        href="/"
+        href="https://github.com/alekseyio/personal-website"
         rel="noopener noreferrer"
         target="_blank"
       >
