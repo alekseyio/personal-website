@@ -7,6 +7,7 @@ import { Footer } from '~/components/footer';
 import { Header } from '~/components/header';
 
 import './globals.css';
+import { Providers } from './providers';
 
 const notoSans = Noto_Sans({
   display: 'swap',
@@ -23,13 +24,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html className={notoSans.variable} lang="en">
-      <body className="dark:bg-zinc-950">
-        <div className="mx-auto w-full max-w-2xl px-6 py-16 max-sm:px-5 max-sm:py-8">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+    <html suppressHydrationWarning className={notoSans.variable} lang="en">
+      <body className="dark:bg-zinc-900">
+        <Providers>
+          <div className="mx-auto w-full max-w-2xl px-6 py-16 max-sm:px-5 max-sm:py-8">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );

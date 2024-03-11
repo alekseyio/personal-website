@@ -24,6 +24,10 @@
   p + p {
     @apply mt-4 max-sm:mt-3;
   }
+
+  *:focus-visible {
+    @apply outline-2 outline-offset-4 outline-black;
+  }
 }
 
 @layer components {

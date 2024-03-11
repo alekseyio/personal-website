@@ -9,7 +9,7 @@ import clsx from 'clsx';
 
 import { ArrowLeft, GitHub, LinkedIn, Telegram } from '~/common/components/icons';
 
-import { ThemeToggle } from './theme-toggle';
+import { ThemeSelector } from './theme-selector';
 
 export function Header() {
   const pathname = usePathname();
@@ -25,7 +25,7 @@ export function Header() {
       />
       <IconLink href="https://github.com/alekseyio" icon={GitHub} title="GitHub" />
       <IconLink href="https://t.me/alekseyio" icon={Telegram} title="Telegram" />
-      <ThemeToggle className={clsx(!shouldRenderBackBtn && 'ml-auto')} />
+      <ThemeSelector className={clsx(!shouldRenderBackBtn && 'ml-auto')} />
     </header>
   );
 }
@@ -41,7 +41,7 @@ function IconLink({
 }) {
   return (
     <a
-      className="rounded-lg p-1.5 hover:bg-gray-100 dark:hover:bg-zinc-800"
+      className="rounded-lg p-1.5 hover:bg-gray-200 dark:hover:bg-zinc-800"
       href={href}
       rel="noopener noreferrer"
       target="_blank"
