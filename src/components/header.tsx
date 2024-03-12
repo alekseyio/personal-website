@@ -58,7 +58,7 @@ function BackButton() {
       className="mr-auto inline-flex items-center gap-1.5 px-1.5 font-medium text-black hover:text-gray-600 dark:text-zinc-50 dark:hover:text-zinc-300"
       href="/"
     >
-      <ArrowLeft />
+      <ArrowLeft className="h-5 w-5" />
       Go back
     </Link>
   );

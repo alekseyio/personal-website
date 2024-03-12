@@ -24,7 +24,7 @@ export function Intro() {
       <div className="mt-5 space-x-4">
         <a className="action action--primary" href="/resume.pdf" target="_blank">
           Resume
-          <ExternalLink className="h-[1.125rem] w-[1.125rem]" />
+          <ExternalLink className="h-5 w-5" />
         </a>
         <Link className="action action--secondary" href="/contact">
           Get in touch
