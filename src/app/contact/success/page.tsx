@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     follow: false,
     index: false,
   },
+  title: 'Thank you!',
 };
 
 export default function Success() {

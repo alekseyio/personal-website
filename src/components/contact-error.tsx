@@ -8,7 +8,7 @@ export function ContactError() {
         It might be an internal error or you got rate limited due to high number of
         submitted contact requests from your side.
       </p>
-      <p>Nevertheless, here&apos;s a photo of a cat so you won&apos;t feel down 😊</p>
+      <p>Nevertheless, here&apos;s a photo of a cat so you don&apos;t feel down 😊</p>
       <p>
         <CatImage />
       </p>

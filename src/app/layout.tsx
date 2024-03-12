@@ -6,6 +6,7 @@ import { Noto_Sans } from 'next/font/google';
 import { Footer } from '~/components/footer';
 import { Header } from '~/components/header';
 
+import { config } from './config';
 import './globals.css';
 import { Providers } from './providers';
 
@@ -18,6 +19,7 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(config.common.baseUrl),
   title: 'Aleksei Kuznetsov',
   description: 'Aleksei Kuznetsov, full-stack developer',
 };

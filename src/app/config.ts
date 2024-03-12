@@ -1,6 +1,10 @@
 import { assert } from '~/common/util';
 
 assert(
+  typeof process.env.BASE_URL === 'string',
+  '"BASE_URL" environment variable is not defined',
+);
+assert(
   typeof process.env.RATE_LIMIT_CREATE_CONTACT_MAX_ATTEMPTS === 'string',
   '"RATE_LIMIT_CREATE_CONTACT_MAX_ATTEMPTS" environment variable is not defined',
 );
@@ -34,6 +38,9 @@ assert(
 );
 
 export const config = {
+  common: {
+    baseUrl: process.env.BASE_URL,
+  },
   rateLimit: {
     createContact: {
       maxAttempts: parseInt(process.env.RATE_LIMIT_CREATE_CONTACT_MAX_ATTEMPTS, 10),

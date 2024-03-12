@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     follow: false,
     index: false,
   },
+  title: 'Uh-oh, an error!',
 };
 
 export default function Error() {

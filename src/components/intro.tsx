@@ -8,10 +8,10 @@ export function Intro() {
       <h1>
         Aleksei Kuznetsov
         <br />
-        Software Engineer & Mentor
+        Full-stack Developer
       </h1>
       <p>
-        Hey, my name is Aleksei. I&apos;m a full-stack engineer from Helsinki, Finland.
+        Hey, my name is Aleksei. I&apos;m a full-stack developer from Helsinki, Finland.
         <br />
         I&apos;m passionate about all aspects of application development, but my
         expertise primarily lies in frontend and backend development for web
