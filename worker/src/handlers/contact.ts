@@ -4,6 +4,7 @@ import { z } from 'zod';
 
 import { Env } from '../env';
 import { sendMessage } from '../external/telegram';
+import { validateTurnstileToken } from '../helpers';
 
 const contactSchema = z.object({
   subject: z.string({
@@ -13,6 +14,10 @@ const contactSchema = z.object({
   message: z.string({
     required_error: 'Message is required',
     invalid_type_error: 'Message must be a string',
+  }),
+  token: z.string({
+    required_error: 'Token is required',
+    invalid_type_error: 'Token must be a string',
   }),
 });
 
@@ -42,6 +47,33 @@ export const contact: Handler = async c => {
   const payload = parseResult.data;
   const config = env<Env>(c);
 
+  /**
+   * Turnstile token verification
+   */
+  try {
+    const ip = c.req.header('CF-Connecting-IP');
+
+    const isValid = await validateTurnstileToken(
+      config.TURNSTILE_SECRET_KEY,
+      payload.token,
+      ip,
+    );
+
+    if (!isValid) {
+      c.status(400);
+      return c.json({ error: 'Token is invalid' });
+    }
+  } catch (err) {
+    console.log('Failed to validate token');
+    console.log(err);
+
+    c.status(500);
+    return c.json({ error: 'Failed to validate token' });
+  }
+
+  /**
+   * Send telegram message
+   */
   try {
     await sendMessage(payload.subject, payload.message, {
       accessToken: config.TELEGRAM_BOT_ACCESS_TOKEN,
@@ -54,7 +86,7 @@ export const contact: Handler = async c => {
     console.log('Failed to send Telegram message');
     console.log(err);
 
-    c.status(400);
+    c.status(500);
     return c.json({ error: 'Failed to send Telegram message' });
   }
 };
