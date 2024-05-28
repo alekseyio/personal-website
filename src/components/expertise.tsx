@@ -12,7 +12,7 @@ export function Expertise() {
         <span className="font-medium text-black dark:text-zinc-50">Backend.</span>{' '}
         I&apos;ve contributed to lots of services ranging from simple REST APIs to
         complex web socket applications while working with both SQL and NoSQL databases.
-        My main stack is Node.js & Go alongside a SQL database.
+        My main stack is Node.js, Python and Go.
       </p>
       <p>
         <span className="font-medium text-black dark:text-zinc-50">This</span>, by all

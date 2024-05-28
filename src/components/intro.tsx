@@ -13,13 +13,8 @@ export function Intro() {
       <p>
         Hey, my name is Aleksei. I&apos;m a full-stack developer from Helsinki, Finland.
         <br />
-        I&apos;m passionate about all aspects of application development, but my
-        expertise primarily lies in frontend and backend development for web
-        applications.
-      </p>
-      <p>
-        I frequently assist other engineers seeking expertise in areas where I&apos;ve
-        contributed. This makes mentoring a regular part of my daily work.
+        I&apos;m passionate about all sorts of software engineering, but my expertise
+        primarily lies in frontend and backend development of web applications.
       </p>
       <div className="mt-5 space-x-4">
         <a className="action action--primary" href="/resume.pdf" target="_blank">
